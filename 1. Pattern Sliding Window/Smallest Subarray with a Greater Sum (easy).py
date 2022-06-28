@@ -12,13 +12,6 @@ def smallest_subarray_sum(s, arr):
          window_sum -= arr[window_start]
          window_start += 1
     return min_length  
-      
-
-# 7, [2, 1, 5, 2, 3, 2]
-# output : 2
-# window sum = 0
-# window_start = 0
-# min_length = inf
 
 # First add each element until window_sum >= 7. Record the length of the array. and then contract the array and check if 
 # window_sum is still >= 7. If so record the length the array and contract again until it is no longer >= 7. Expand the array and
@@ -32,6 +25,4 @@ def main():
      + str(smallest_subarray_sum(7, [2, 1, 5, 2, 8])))
   print("Smallest subarray length: " 
      + str(smallest_subarray_sum(8, [3, 4, 1, 1, 6])))
-
-
 main()
